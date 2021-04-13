@@ -93,7 +93,7 @@ public class IssueBookForm extends JFrame {
                         frame.dispose();
 
                     }else{
-                        JOptionPane.showMessageDialog(IssueBookForm.this,"Sorry, unable to issue!");
+                        JOptionPane.showMessageDialog(IssueBookForm.this,"Sorry, unable to issue. no stock available!");
                     }//end of save if-else
 
                 }else{
