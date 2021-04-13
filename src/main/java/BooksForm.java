@@ -25,8 +25,6 @@ public class BooksForm extends JFrame {
     private JTextField textField_2;
     private JTextField textField_3;
     private JTextField textField_4;
-    private JTextField textField_5;
-    private JTextField textField_6;
 
     /**
      * Launch the application.
@@ -68,10 +66,6 @@ public class BooksForm extends JFrame {
 
         JLabel lblQuantity = new JLabel("Quantity:");
 
-        JLabel lblIssued = new JLabel("Issued:");
-
-        JLabel lblDateAdded = new JLabel("Date Added:");
-
         textField = new JTextField();
         textField.setColumns(10);
 
@@ -87,12 +81,6 @@ public class BooksForm extends JFrame {
         textField_4 = new JTextField();
         textField_4.setColumns(10);
 
-        textField_5 = new JTextField();
-        textField_5.setColumns(10);
-
-        textField_6 = new JTextField();
-        textField_6.setColumns(10);
-
         JButton btnAddBooks = new JButton("Add Books");
         btnAddBooks.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -101,8 +89,6 @@ public class BooksForm extends JFrame {
                 String author=textField_2.getText();
                 String publisher=textField_3.getText();
                 String squantity=textField_4.getText();
-                String issued = textField_5.getText();
-                String dateAdded = textField_6.getText();
 
                 int quantity=Integer.parseInt(squantity);
                 int i=BookDao.save(callno, name, author, publisher, quantity);
