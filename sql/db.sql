@@ -1,3 +1,4 @@
+drop database library;
 create database library;
 use library;
 
@@ -11,8 +12,8 @@ CREATE TABLE IF NOT EXISTS `books` (
   `author` varchar(100) NOT NULL,
   `publisher` varchar(100) NOT NULL,
   `quantity` int(10) NOT NULL,
-  `issued` int(10) NOT NULL,
-  `added_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `issued` int(10),
+  `added_date` timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `callno` (`callno`),
   UNIQUE KEY `callno_2` (`callno`)
@@ -53,6 +54,9 @@ CREATE TABLE IF NOT EXISTS `librarian` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 INSERT INTO `librarian` (`id`, `name`, `password`, `email`, `address`, `city`, `contact`) VALUES
-(1, 'Prabhakar', 'ppp', 'prabhakar@gmail.com', 'javatpoint', 'noida', '9998328238'),
-(4, 'sumedh', 'sumesh', 'sumesh@gmail.com', 'Kuch Bhi', 'noida', '93823932823'),
-(6, 'abhi', 'abhi', 'abhi@gmail.com', 'javatpoint', 'noida', '92393282323');
+(1, 'saba', 'saba', 'saba@gmail.com', 'miri, tal-pathardi', 'miri', '1234567890'),
+(4, 'sss', 'sss', 'sss@gmail.com', 'sss', 'miri', '9876541230'),
+(6, 'aman', 'aman', 'aman@gmail.com', 'aman', 'taklimiya', '5641230789');
+
+show databases;
+select * from librarian where name='Prabhakar' and password='ppp';
